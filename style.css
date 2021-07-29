@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+.notice{
+    font-size: 20px;
+    font-family: 'Gowun Dodum', sans-serif;
+    color: lightgray;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 8;
+    animation: updown 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+.season-name{
+    opacity: 0;
+    z-index: 8;
+    margin: 0 25 50 25;
+}
+    .name-spring.active {
+        opacity: 1;
+        transition-duration: 0.5s;
+    }
+    .name-summer.active {
+        opacity: 1;
+        transition-duration: 0.5s;
+    }
+    .name-fall.active {
+        opacity: 1;
+        transition-duration: 0.5s;
+    }
+    .name-winter.active {
+        opacity: 1;
+        transition-duration: 0.5s;
+    }
+
+.menu-item{
+    width: 60%;
+    opacity: 0.1;
+    z-index: 8;
+    margin: 0 25 50 25;
+}
+    .menu-item.active{
+        opacity: 1;
+    }
+    .menu-item:hover{
+        opacity: 1;
+        transition-duration: 0.2s;
+        transform: scale(1.1, 1.1);
+}
+.photo-container{
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-55%);
+    object-fit: contain;
+    position: absolute;
+}
+.food-container{
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-55%);
+    position: absolute;
+}
+    .food-container:hover{
+        opacity: 0;
+        transition-duration: 3s;
+}
+.text-container.active{
+    /* width: 80%; */
+    animation: fadein 2s;
+    animation-fill-mode: backwards;
+}
+.title-container{
+    position: absolute;
+    right: 20;
+    top: 10;
+    width: 11%;
+}
+.road-container{
+    position: fixed;
+    bottom: 0;
+    /* width: 100%; */
+}
+.person{
+    width: 3%;
+    opacity: 0.6;
+    position: fixed;
+    bottom: 50;
+    animation: slidein 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes updown {
+    from{
+        margin-top: 0px;
+    }
+    to{
+        margin-top: 10px;
+    }
+}
+@keyframes slidein {
+    from{
+        margin-left: 100%;
+    }
+    to{
+        margin-left: -20%;
+    }
+}
+
+/* 랜덤 */
+/* .piece-container {
+  position: absolute;
+  animation-name: float;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, -1000px);
+  }
+  100% {
+    transform: translate(0, 1000px);
+  }  
+} */
